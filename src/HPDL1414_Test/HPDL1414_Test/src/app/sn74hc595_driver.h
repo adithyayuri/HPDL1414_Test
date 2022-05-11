@@ -1,0 +1,26 @@
+/*
+ * sn74hc595_driver.h
+ *
+ * Created: 2022-05-10
+ *  Author: Adithya Yuri
+ */ 
+
+
+#ifndef SN74HC595_DRIVER_H_
+#define SN74HC595_DRIVER_H_
+
+#include <asf.h>
+
+#define SN74HC595_SPI_MODULE  EXT1_SPI_MODULE
+#define SN74HC595_MUX_SETTING EXT1_SPI_SERCOM_MUX_SETTING
+#define SN74HC595_PINMUX_PAD0 EXT1_SPI_SERCOM_PINMUX_PAD0
+#define SN74HC595_PINMUX_PAD1 PINMUX_UNUSED
+#define SN74HC595_PINMUX_PAD2 EXT1_SPI_SERCOM_PINMUX_PAD2
+#define SN74HC595_PINMUX_PAD3 EXT1_SPI_SERCOM_PINMUX_PAD3
+#define SN74HC595_BUAD		  1000000
+
+struct spi_module spi_instance_sn74hc595;
+
+void conf_spi_master(void);
+
+#endif /* SN74HC595_DRIVER_H_ */
